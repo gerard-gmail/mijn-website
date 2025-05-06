@@ -3,53 +3,130 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <title>Website Gerard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Contacteer Gerard</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        /* Extra stijlen voor het mannetje en de tekstballon (kun je later in style.css plaatsen) */
+        .contact-greeting {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .greeting-image {
+            width: 100px; /* Pas de grootte naar wens aan */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .speech-bubble {
+            background-color: #e0f7fa; /* Lichtblauw, pas naar wens aan */
+            color: #333;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 0.9em;
+            position: relative;
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px 10px 0 10px;
+            border-style: solid;
+            border-color: #e0f7fa transparent transparent transparent;
+        }
+    </style>
 </head>
 <body>
     <div class="main">
         <div class="navbar">
-            <img src="/assets/img/logo.jpg" class="logo" >
-
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/img/logo.jpg" class="logo" alt="Logo Gerard">
+            </a>
             <div class="menu-toggle" id="menu-toggle">
                 ☰
             </div>
-
             <ul id="nav-links">
                 <li><a href="/index.html">HOME</a></li>
                 <li><a href="/portfolio.html">OVER MIJ</a></li>
-                <li><a href="/projecten.html">PROJECTEN &#x25BE;</a></li>
+                <li><a href="/projecten.html">PROJECTEN</a></li>
                 <li><a href="/contact.html">CONTACT</a></li>
             </ul>
         </div>
 
+        <section class="contact-greeting">
+            <img src="/assets/img/robot-ai-technology-character-icon.png" alt="Vriendelijk mannetje" class="greeting-image">
+            <div class="speech-bubble" id="greeting-text">Ik sta klaar voor al uw vragen!</div>
+        </section>
 
-        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+        <section class="contact-form">
+            <h2>Contacteer Mij</h2>
+            <div class="form-group">
+                <label for="name">Naam:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Onderwerp:</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+            <div class="form-group">
+                <label for="message">Bericht:</label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+            <button type="button" class="send-button" onclick="sendEmail()">Stuur Bericht</button>
+        </section>
 
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-      
-    menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    });
-</script>
-    
+        <script>
+            const menuToggle = document.getElementById('menu-toggle');
+            const navLinks = document.getElementById('nav-links');
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            function sendEmail() {
+                const name = document.getElementById('name').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                const recipient = 'bareyangerard27@gmail.com';
+                const body = `Naam: ${name}\nOnderwerp: ${subject}\n\nBericht: ${message}`;
+                const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoUrl;
+            }
+
+            // Array met random begroetingen
+            const greetings = [
+                "Hopelijk was alles duidelijk!",
+                "Stel al je vragen hier.",
+                "Hopelijk kunnen we een team worden!",
+                "Wat kan ik voor je doen?",
+                "Aarzel niet om contact op te nemen.",
+                "Ik ben er om je te helpen.",
+                "Fijn dat je contact opneemt!",
+                "Laat van je horen!",
+            ];
+
+            const greetingTextElement = document.getElementById('greeting-text');
+
+            function changeGreeting() {
+                const randomIndex = Math.floor(Math.random() * greetings.length);
+                greetingTextElement.textContent = greetings[randomIndex];
+            }
+
+            // Verander de begroeting elke paar seconden (bijvoorbeeld elke 3 seconden)
+            setInterval(changeGreeting, 3000);
+
+            // Toon de eerste begroeting direct bij het laden van de pagina
+            changeGreeting();
+        </script>
+    </div>
 </body>
 </html>

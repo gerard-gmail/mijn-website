@@ -189,3 +189,259 @@ ul li a:hover{
     }
   }
 /*tot hier*/
+
+@media (max-width: 768px) {
+    .image {
+      display: none;
+    }
+}
+
+/* Stijlen voor de projecten pagina (gecentreerde rechthoeken) */
+.projecten {
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.projecten h2 {
+    font-size: 2.5em;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.projecten-grid {
+    display: flex; /* Gebruik flexbox voor centrering */
+    flex-wrap: wrap; /* Zorgt ervoor dat de kaarten naar de volgende rij gaan als er niet genoeg ruimte is */
+    justify-content: center; /* Centreert de kaarten horizontaal */
+    align-items: center; /* Centreert de kaarten verticaal (in het geval van ongelijke hoogte) */
+    gap: 20px; /* Ruimte tussen de kaarten */
+    padding: 20px; /* Wat padding rondom de grid */
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Vaste breedte voor de rechthoeken */
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px; /* Wat ruimte onder elke kaart */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.project-card h3 {
+    font-size: 1.8em;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: darkslategray;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.project-card ul li {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.project-card a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: orange;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #e08e00;
+}
+
+/* Responsive aanpassingen voor kleinere schermen (projecten) */
+@media (max-width: 768px) {
+    .projecten-grid {
+        flex-direction: column; /* Stapel de rechthoeken onder elkaar op kleinere schermen */
+        align-items: center; /* Centreer de rechthoeken horizontaal */
+    }
+
+    .project-card {
+        width: 90%; /* Laat de rechthoeken meer breedte innemen op kleinere schermen */
+        text-align: center;
+    }
+}
+
+/* Media query voor schermen smaller dan of gelijk aan 768px (achtergrond fix) */
+@media (max-width: 768px) {
+    .main {
+        min-height: 350vh; /* Hogere min-hoogte voor kleinere schermen */
+    }
+}
+
+/* Stijlen voor de contactpagina */
+.contact-page {
+    padding: 40px 8%;
+    text-align: center;
+}
+
+.contact-page h2 {
+    font-size: 2.5em;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.send-button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: orange;
+}
+
+/* Responsive aanpassingen voor kleinere schermen (contact) */
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 30px 5%;
+    }
+
+    .contact-form {
+        padding: 15px;
+    }
+
+    .form-group label {
+        font-size: 1em;
+    }
+
+    .form-group input[type="text"],
+    .form-group textarea {
+        font-size: 1em;
+    }
+
+    .send-button {
+        font-size: 1em;
+    }
+}
+
+
+.contact-form textarea:focus {
+    outline: none; /* Verwijdert de standaard focus outline (meestal blauw) */
+    border-color: orange; /* Stelt de kleur van de rand in op oranje */
+    box-shadow: 0 0 5px orange; /* Voegt eventueel een subtiele oranje schaduw toe */
+}
+
+.contact-form input[type="text"]:focus {
+    outline: none; /* Verwijdert de standaard focus outline */
+    border-color: orange; /* Stelt de kleur van de rand in op oranje */
+    box-shadow: 0 0 5px orange; /* Voegt eventueel een subtiele oranje schaduw toe */
+}
+
+/* Stijlen voor de contactpagina met robotje en tekst boven */
+.contact-greeting {
+    display: flex;
+    flex-direction: column; /* Stapelt de afbeelding en tekst onder elkaar */
+    align-items: center; /* Centreert de afbeelding en tekst horizontaal */
+    margin-bottom: 20px;
+}
+
+.greeting-image {
+    width: 100px; /* Pas de grootte naar wens aan */
+    height: auto;
+    margin-bottom: 20px; /* Ruimte tussen de robot en de tekstballon */
+}
+
+.speech-bubble {
+    background-color:orange; /* Lichtblauw, pas naar wens aan */
+    color: #333;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+    position: relative;
+    text-align: center; /* Centreert de tekst in de ballon */
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    top: -10px; /* Positioneert het puntje boven de tekstballon */
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg); /* Draait het puntje om */
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: orange transparent transparent;
+}
