@@ -9,7 +9,8 @@
     background: url(/assets/img/background.jpg);
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    background-attachment: fixed;
+    min-height: 100vh;
     position: relative;
     font-family: sans-serif;
 }
@@ -32,6 +33,12 @@
 
 ul{
     margin-top: -4;
+}
+
+body {
+    /* ... andere body stijlen ... */
+    background-attachment: fixed;
+    min-height: 100%;
 }
 
 ul li{
@@ -286,20 +293,20 @@ ul li a:hover{
 }
 
 /* Responsive aanpassingen voor kleinere schermen (projecten) */
-@media (max-width: 768px) {
+@media (max-width: 100%) {
     .projecten-grid {
         flex-direction: column; /* Stapel de rechthoeken onder elkaar op kleinere schermen */
         align-items: center; /* Centreer de rechthoeken horizontaal */
     }
 
     .project-card {
-        width: 90%; /* Laat de rechthoeken meer breedte innemen op kleinere schermen */
+        width: 100%; /* Laat de rechthoeken meer breedte innemen op kleinere schermen */
         text-align: center;
     }
 }
 
 /* Media query voor schermen smaller dan of gelijk aan 768px (achtergrond fix) */
-@media (max-width: 768px) {
+@media (max-width: 100%) {
     .main {
         min-height: 350vh; /* Hogere min-hoogte voor kleinere schermen */
     }

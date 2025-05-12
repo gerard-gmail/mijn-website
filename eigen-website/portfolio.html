@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -19,37 +19,168 @@
       referrerpolicy="no-referrer"
     />
     <title>Website Gerard</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      /* Extra stijlen voor de "Over Mij" sectie op de homepage */
+      .about-me {
+        padding: 40px 8%;
+        color: black;
+      }
+
+      .about-me-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .about-me-image {
+        flex: 1 1 300px; /* Basisbreedte van 300px, groeit en krimpt flexibel */
+        max-width: 400px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-me-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+      }
+
+      .about-me-text {
+        flex: 1 1 400px; /* Basisbreedte van 400px, groeit en krimpt flexibel */
+        line-height: 1.7;
+      }
+
+      .about-me-text h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      .about-me-text h3 {
+        font-size: 1.8em;
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+
+      .about-me-text p {
+        margin-bottom: 15px;
+      }
+
+      .about-me-text span {
+        color: orange; /* Accentkleur voor belangrijke woorden */
+        font-weight: bold;
+      }
+
+      /* Responsive aanpassingen */
+      @media (max-width: 768px) {
+        .about-me-container {
+          flex-direction: column; /* Stapel de afbeelding en tekst onder elkaar op kleinere schermen */
+          align-items: center;
+        }
+
+        .about-me-image {
+          max-width: 80%;
+        }
+
+        .about-me-text {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <div class="main">
-        <div class="navbar">
-            <img src="/assets/img/logo.jpg" class="logo" >
+      <div class="navbar">
+        <a href="/index.html" class="logo-link">
+          <img src="/assets/img/logo.jpg" class="logo" alt="Logo Gerard" />
+        </a>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <ul id="nav-links">
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/portfolio.html">OVER MIJ</a></li>
+          <li><a href="/projecten.html">PROJECTEN</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </div>
 
-            <div class="menu-toggle" id="menu-toggle">
-                ☰
-            </div>
+      <section class="about-me">
+        <div class="about-me-container">
+          <div class="about-me-image">
+            <img
+              src="/assets/img/gerard.jpg"
+              alt="Professionele foto van Gerard"
+            />
+          </div>
+          <div class="about-me-text">
+            <h2>Over Mij</h2>
+            <p>
+              Hallo! Ik ben Gerard Bareyan, een enthousiaste eerstjaarsstudent
+              in de fascinerende wereld van het
+              <span>Internet of Things (IoT)</span> aan de AP Hogeschool in
+              Antwerpen. Voor mij is IoT niet zomaar een studierichting; het is
+              de perfecte samensmelting van mijn passies: de tastbare wereld van
+              elektronica, de logica van programmeren in <span>Python</span>, de
+              structuur van <span>HTML</span>, en het tot leven brengen van
+              slimme apparaten door ze naadloos met elkaar te verbinden. Hier in
+              Antwerpen leg ik de fundamenten om mijn ambitie waar te maken:
+              actief bijdragen aan de digitale revolutie die onze toekomst
+              vormgeeft.
+            </p>
 
-            <ul id="nav-links">
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/portfolio.html">OVER MIJ</a></li>
-                <li><a href="/projecten.html">PROJECTEN</a></li>
-                <li><a href="/contact.html">CONTACT</a></li>
-            </ul>
+            <h3>Een Technisch Fundament Gesmeed in Metaal</h3>
+            <p>
+              Mijn reis in de technologie begon niet met bits en bytes, maar met
+              de precisie van metaalbewerking. Tijdens mijn opleiding tot
+              <span>CNC-operator</span> aan het Don Bosco Mariaberginstituut,
+              ontwikkelde ik een diep respect voor technische tekeningen, de
+              nauwgezetheid van engineering en de kracht van CNC-programmeren.
+              Deze hands-on ervaring is meer dan een diploma; het is een solide
+              basis die mijn huidige IoT-studie verrijkt met een praktisch en
+              probleemoplossend perspectief.
+            </p>
+
+            <h3>De Menselijke Factor: Van Psychologie naar Technologie</h3>
+            <p>
+              Mijn pad is misschien onconventioneel, want voordat ik me in de
+              wereld van sensoren en netwerken stortte, verkende ik de
+              complexiteit van de menselijke geest tijdens mijn studie
+              <span>Toegepaste Psychologie</span> aan dezelfde hogeschool. De
+              inzichten die ik daar opdeed in communicatie, menselijk gedrag en
+              coaching zijn verrassend waardevol gebleken. Ze helpen me niet
+              alleen in teamprojecten binnen mijn technische opleiding, maar
+              geven me ook een uniek perspectief op hoe technologie de
+              menselijke ervaring kan verbeteren.
+            </p>
+
+            <h3>Gedreven door Nieuwsgierigheid, Gefocust op Veiligheid</h3>
+            <p>
+              Als een gemotiveerde student met een brede honger naar kennis, ben
+              ik altijd op zoek naar praktische oplossingen voor complexe
+              uitdagingen. Mijn blik is stevig gericht op de toekomst, en een
+              domein dat mijn hart sneller doet kloppen is
+              <span>cybersecurity</span> binnen het IoT-ecosysteem. Het idee om
+              bij te dragen aan de ontwikkeling van veilige, intelligente
+              systemen – systemen die we blindelings kunnen vertrouwen – is wat
+              me elke dag motiveert om te leren en te groeien.
+            </p>
+          </div>
         </div>
+      </section>
 
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
-        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+      <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
 
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-      
-    menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    });
-</script>
-    
-</body>
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
+    </div>
+  </body>
 </html>

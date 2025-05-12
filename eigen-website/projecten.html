@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -19,112 +19,167 @@
       referrerpolicy="no-referrer"
     />
     <title>Mijn Projecten</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
     <div class="main">
-        <div class="navbar">
-            <a href="index.html" class="logo-link">
-                <img src="/assets/img/logo.jpg" class="logo" alt="Ga naar de homepage">
-              </a>
+      <div class="navbar">
+        <a href="index.html" class="logo-link">
+          <img
+            src="/assets/img/logo.jpg"
+            class="logo"
+            alt="Ga naar de homepage"
+          />
+        </a>
 
-            <div class="menu-toggle" id="menu-toggle">
-                ☰
-            </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
 
-            <ul id="nav-links">
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/portfolio.html">OVER MIJ</a></li>
-                <li><a href="/projecten.html">PROJECTEN</a></li>
-                <li><a href="/contact.html">CONTACT</a></li>
+        <ul id="nav-links">
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/portfolio.html">OVER MIJ</a></li>
+          <li><a href="/projecten.html">PROJECTEN</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <section class="projecten">
+        <h2>Mijn Projecten</h2>
+        <div class="projecten-grid">
+          <div class="project-card">
+            <img src="/assets/img/Kannon.png" alt="Project 1 Placeholder" />
+            <h3>KANON</h3>
+            <p>
+              Voor mijn GIP-project in het 7de jaar heb ik een miniatuurkanon
+              ontworpen en gebouwd. Dit project combineert verschillende
+              metaalbewerkings­technieken zoals draaien, frezen, boren en
+              schroeven. Ik maakte gebruik van CNC-machines en programmeerde ze
+              met G-code via HSMWorks of rechtstreeks met N-code. Het ontwerp
+              werd volledig uitgetekend in SolidWorks, waarmee ik nauwkeurige
+              technische tekeningen en simulaties kon maken. De constructie
+              vereiste veel precisie en planning, en ik ben trots op het
+              eindresultaat!
+            </p>
+            <ul>
+              <li>CNC</li>
+              <li>Solid-Works</li>
+              <li>HSM-Works</li>
             </ul>
+            <a
+              href="https://ap.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=df737336-b443-41c3-a204-b2da000da69d"
+              >Bekijk Demo</a
+            >
+          </div>
+
+          <div class="project-card">
+            <img src="/assets/img/slagboom.png" alt="Project 2 Placeholder" />
+            <h3>SLAGBOOM</h3>
+            <p>
+              Voor het vak Embedded Systemen ontwierp ik een automatische
+              slagboom met een Arduino Nano, servomotor, drukknoppen en LED’s.
+              Bij een open slagboom brandde een groen LED-licht. Zodra de
+              slagboom sloot, knipperden twee rode LED’s om de beurt. De
+              slagboom werd bediend via twee drukknoppen: één voor aankomst
+              (sluiten) en één voor vertrek (openen). De aansturing gebeurde met
+              interrupts, zodat het systeem snel en correct reageerde. Dit
+              project gaf mij een goed inzicht in het werken met
+              hardwarecomponenten en real-time softwaresturing.
+            </p>
+            <ul>
+              <li>C++</li>
+              <li>Arduino IDE</li>
+              <li>Oscilloscoop</li>
+            </ul>
+            <a
+              href="https://ap.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=e3306309-0764-4c55-bffa-b2d90180ae3c"
+              >Bekijk Demo</a
+            >
+            <a href="https://wokwi.com/projects/425068228806459393">Wokwi</a>
+          </div>
+
+          <div class="project-card">
+            <img src="/assets/img/Loxone.JPG" alt="Project 3 Placeholder" />
+            <h3>LOXONE: Automatische zonnewering</h3>
+            <p>
+              Voor dit project gebruikte ik het Loxone-systeem om een
+              automatische zonnewering te maken voor een zuidgericht schuifraam.
+              De zonnewering sluit bij felle zon, maar blijft open als iemand
+              via de schuifdeur naar buiten is gegaan. Elke keer als de
+              zonnewering opent, gaat er automatisch een gloeilamp aan via een
+              relais. Ik bracht de bekabeling in orde en gebruikte het programma
+              Loxone Config om de volledige logica te programmeren.
+            </p>
+            <ul>
+              <li>Loxone Config</li>
+              <li>Smart home</li>
+              <li>Elektrische installatie</li>
+            </ul>
+            <a href="#">Documentatie project</a>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="/assets/img/project4-placeholder.jpg"
+              alt="Project 4 Placeholder"
+            />
+            <h3>Project Titel 4</h3>
+            <p>
+              Nog een interessant project waarbij ik [andere vaardigheid] heb
+              ingezet om een specifiek probleem op te lossen.
+            </p>
+            <ul>
+              <li>React</li>
+              <li>Frontend</li>
+            </ul>
+            <a href="#">Bekijk Code</a>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="/assets/img/project5-placeholder.jpg"
+              alt="Project 5 Placeholder"
+            />
+            <h3>Project Titel 5</h3>
+            <p>
+              Dit project was gericht op [het doel van het project] en ik heb
+              daarbij geleerd over [belangrijke leerpunten].
+            </p>
+            <ul>
+              <li>Node.js</li>
+              <li>Backend</li>
+            </ul>
+            <a href="#">Live Voorbeeld</a>
+          </div>
+
+          <div class="project-card">
+            <img
+              src="/assets/img/project6-placeholder.jpg"
+              alt="Project 6 Placeholder"
+            />
+            <h3>Project Titel 6</h3>
+            <p>
+              Mijn laatste project in deze selectie, waarin ik [een unieke
+              aanpak/technologie] heb gebruikt.
+            </p>
+            <ul>
+              <li>HTML5 Canvas</li>
+              <li>Animatie</li>
+            </ul>
+            <a href="#">Project Details</a>
+          </div>
         </div>
+      </section>
 
-        <section class="projecten">
-            <h2>Mijn Projecten</h2>
-            <div class="projecten-grid">
-                <div class="project-card">
-                    <img src="/assets/img/project1-placeholder.jpg" alt="Project 1 Placeholder">
-                    <h3>Project Titel 1</h3>
-                    <p>Een korte beschrijving van het eerste project dat ik heb gemaakt, met de focus op de gebruikte technologieën en het bereikte resultaat.</p>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <a href="#">Bekijk Demo</a>
-                    <a href="#">GitHub</a>
-                </div>
+      <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
-                <div class="project-card">
-                    <img src="/assets/img/project2-placeholder.jpg" alt="Project 2 Placeholder">
-                    <h3>Project Titel 2</h3>
-                    <p>Een beknopte uitleg van het tweede project, waarin ik mijn vaardigheden in een andere context heb toegepast.</p>
-                    <ul>
-                        <li>Python</li>
-                        <li>Data Analyse</li>
-                    </ul>
-                    <a href="#">Meer Details</a>
-                </div>
+      <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
 
-                <div class="project-card">
-                    <img src="/assets/img/project3-placeholder.jpg" alt="Project 3 Placeholder">
-                    <h3>Project Titel 3</h3>
-                    <p>Dit project demonstreert mijn kennis van [specifieke technologie/vaardigheid] en de uitdagingen die ik ben aangegaan.</p>
-                    <ul>
-                        <li>Arduino</li>
-                        <li>IoT</li>
-                    </ul>
-                    <a href="#">Case Study</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="/assets/img/project4-placeholder.jpg" alt="Project 4 Placeholder">
-                    <h3>Project Titel 4</h3>
-                    <p>Nog een interessant project waarbij ik [andere vaardigheid] heb ingezet om een specifiek probleem op te lossen.</p>
-                    <ul>
-                        <li>React</li>
-                        <li>Frontend</li>
-                    </ul>
-                    <a href="#">Bekijk Code</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="/assets/img/project5-placeholder.jpg" alt="Project 5 Placeholder">
-                    <h3>Project Titel 5</h3>
-                    <p>Dit project was gericht op [het doel van het project] en ik heb daarbij geleerd over [belangrijke leerpunten].</p>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Backend</li>
-                    </ul>
-                    <a href="#">Live Voorbeeld</a>
-                </div>
-
-                <div class="project-card">
-                    <img src="/assets/img/project6-placeholder.jpg" alt="Project 6 Placeholder">
-                    <h3>Project Titel 6</h3>
-                    <p>Mijn laatste project in deze selectie, waarin ik [een unieke aanpak/technologie] heb gebruikt.</p>
-                    <ul>
-                        <li>HTML5 Canvas</li>
-                        <li>Animatie</li>
-                    </ul>
-                    <a href="#">Project Details</a>
-                </div>
-            </div>
-        </section>
-
-        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
-        <script>
-            const menuToggle = document.getElementById('menu-toggle');
-            const navLinks = document.getElementById('nav-links');
-
-            menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            });
-        </script>
-
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
     </div>
-</body>
+  </body>
 </html>
